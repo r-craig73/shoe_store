@@ -1,0 +1,8 @@
+require('sinatra/activerecord')
+require('sinatra')
+require('sinatra/reloader')
+require('./lib/store')
+require('./lib/brand')
+also_reload('lib/**/*.rb')
+require('pg')
+require('pry')
