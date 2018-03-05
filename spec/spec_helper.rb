@@ -6,14 +6,15 @@ require('pg')
 require('sinatra/activerecord')
 require('shoe')
 require('store')
+require("shoulda-matchers")
 
 RSpec.configure do |config|
   config.after(:each) do
-    Shoe.all().each() do |task|
-      task.destroy()
+    Shoe.all().each() do |shoe|
+      shoe.destroy()
     end
-    Store.all().each() do |task|
-      task.destroy()
+    Store.all().each() do |store|
+      store.destroy()
     end
   end
 end
