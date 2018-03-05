@@ -1,42 +1,43 @@
 # volunteer_tracker
 
 #### by Ron Craig (ron.craig@comcast.net)
-#### started 03/02/2018, last update TBD (MM/DD/YYYY)
+#### started 03/02/2018, last update 03/05/2018 (MM/DD/YYYY)
 
 ### GitHub repository: https://github.com/r-craig73/shoe_store
 
 ## Description
-### An app using active reader, ruby, BDD, Sinatra and CRUD routing to create a shoe store site organizing shoe stores and shoe brands.
+### An app using Active Reader, ruby, rubygems, BDD, Sinatra and CRUD routing to create a shoe store site organizing shoe stores and shoe brands.
 
 ## Specifications
-### back end specs: class Store
-1. TBD
-2. TBD
-3. TBD
+### Back end specs: class Store
+1. Join relationship with Shoe (using shoulda-matchers gem).
+2. Capitalize (using the titleize method and titleize_name callback) the first letter of the store name.
+3. Validate the presence of a store name (store name is not saved if a user enters a blank store name).
+4. Validate the length of the store name does not exceed 100 characters.
+5. TBD
 
-### back end specs: class Brand
-1. TBD
-2. TBD
-3. TBD
+### Back end specs: class Shoe
+1. Join relationship with Store (using shoulda-matchers gem).
+2. Capitalize (using the titleize method and titleize_name callback) the first letter of the shoe brand.
+3. Validate the presence of a shoe brand (shoe brand name is not saved if a user enters a blank shoe brand name).
+4. Validate the length of the shoe brand does not exceed 100 characters.
+5. Correct currency format (25 -> $25.00). (ONGOING: Could be psql related and/or callback?)
+6. TBD
 
-### Front end specs: Sinatra and user stories
+### Front end specs: Sinatra and user stories (all ONGOING)
 1. A user should be able to add, update, delete and list shoe stores.
 2. A user should be able to add and list new shoe brands and price.
 3. A user should be able to add shoe brands in the application.
 4. A user should be able to input a shoe brand to a store to show where they are sold.
 5. A user should be able to associate the same brand of shoes with multiple stores.
-6. Store names and shoe brands with a capital letter no matter the initial input.
-7. Correct currency format (25 -> $25.00).
-8. Information is not saved if you enter a blank store or blank shoe brand.
-9. Want unique stores and brands.
-10. Store and show brand names should not exceed one hundred characters.
+6. Information is not saved if you enter a blank store or blank shoe brand.
 
 ## Setup/Instructions
-### Install Sinatra Active Record
+### Install Sinatra Active Reader
 * ($ gem install sinatra-activerecord)
 ### Install rake
 * ($ gem install rake)
-### Create and edit Gemfile in the project's root directory
+### Create and edit (1) Gemfile and (2) Rakefile in the project's root directory
 ### Install rubygems (Rspec, pry, Capybara and Sinatra).  In the project's root directory...
 * Install gem bundler ($ gem install bundler; $ bundle install; $ bundle update)
 ### Install Postgres.  Open another terminal window, go to home directory ($ cd ~)...
@@ -44,11 +45,11 @@
 * Open Postgres ($ psql)
 
 ## Known Bugs
-### Non functional website.
+### No functional website.
 
 ## Technology used
-* Ruby and Sinatra (application)
-* Active Reader and rake (database and application)
+* Ruby, Sinatra and shoulda-matchers (application)
+* Active Record and Rake (database and application)
 * Rspec and Capybara (testing)
 
 ### MIT License
