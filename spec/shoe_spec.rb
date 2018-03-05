@@ -8,4 +8,9 @@ describe(Shoe) do
     expect(shoe.titleize_name()).to(eq("Nike"))
   end
 
+  it("validates presence of a shoe brand") do
+    brand = Shoe.new({:brand => ""})
+    expect(brand.save()).to(eq(false))
+  end
+
 end
