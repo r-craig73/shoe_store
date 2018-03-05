@@ -3,6 +3,6 @@ class Shoe < ActiveRecord::Base
   before_save(:titleize_name)
 
   def titleize_name
-    self.name=(name().titleize())
+  #   self.name=(name().titleize())
   end
 end
