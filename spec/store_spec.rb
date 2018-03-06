@@ -22,6 +22,7 @@ describe(Store) do
     store1 = Store.new({:name => "Northeast Portland"})
     store2 = Store.new({:name => "Northeast Portland"})
     expect(store1 == store2).to(eq(false))
+    expect(store1 == store3).to(eq(false))
   end
 
 end

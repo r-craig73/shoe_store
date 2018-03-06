@@ -17,7 +17,7 @@ post('/success') do
   name = params[:name]
   @store = Store.new({:name => name, :id => nil})
   @stores = Store.all()
-  if  @store.save()
+  if @store.save()
     erb(:success)
   else
     erb(:errors)
