@@ -30,6 +30,18 @@ get('/shoes') do
   erb(:shoes)
 end
 
+post('/shoes') do
+  brand = params[:brand]
+  price = params[:price]
+  @shoe = Shoe.new({:brand => brand, :price => price, :id => nil})
+  @shoes = Shoe.all()
+  if @shoe.save()
+    erb(:success)
+  else
+    erb(:errors)
+  end
+end
+
 get('/stores/:id') do
   name = params[:name]
   @store = Store.find(params.fetch('id').to_i())
