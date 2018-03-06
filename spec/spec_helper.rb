@@ -7,6 +7,7 @@ require('sinatra/activerecord')
 require('shoe')
 require('store')
 require('shoulda-matchers')
+require('money')
 
 RSpec.configure do |config|
   config.after(:each) do

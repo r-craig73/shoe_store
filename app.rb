@@ -6,6 +6,7 @@ require('./lib/store')
 require('./lib/shoe')
 require('pg')
 require('pry')
+require('money')
 
 get('/') do
   @stores = Store.all()
