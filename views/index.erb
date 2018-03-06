@@ -1,0 +1,22 @@
+<h2>Gary's Shoes and Accessories Stores</h2>
+
+<form action="/success" method="post">
+  <div class="form-group">
+    <label for="name"><h3>Please enter the store name.</h3></label>
+    <input id="name" name="name" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn btn-info">Add store</button>
+</form>
+
+<% if @stores.any?() %>
+  <h3>Click a store's name to edit or view more details.</h3>
+  <ul>
+  <% @stores.each() do |store| %>
+    <h3><li><a href="stores/<%= store.id()%>"><%= store.name() %></a></li></h3>
+  <% end %>
+  </ul>
+  <% else %>
+    <h3>No stores at the moment!</h3>
+<% end %>
+<hr>
+<h4><a href="/shoes">View shoe brands list</a></h4>

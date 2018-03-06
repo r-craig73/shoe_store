@@ -45,7 +45,7 @@
 * Open Postgres ($ psql)
 
 ## Known Bugs
-### No functional website.
+### No currency value for shoe brands.
 
 ## Technology used
 * Ruby, Sinatra and shoulda-matchers (application)

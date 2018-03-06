@@ -1,0 +1,13 @@
+<h3>Shoe Brands</h3>
+
+<% if @shoes.any?() %>
+  <ul>
+  <% @shoes.each() do |shoe| %>
+    <h3><li><<%= shoe.brand() %></li></h3>
+  <% end %>
+    </ul>
+  <% else %>
+    <h3>No shoe brands at the moment!</h3>
+<% end %>
+<hr>
+<h3><a href="/">Return to the home page.</a></h3>

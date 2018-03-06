@@ -1,0 +1,8 @@
+<h3>Oh, oh!  There appears to be an error!</h3>
+<ul>
+  <% @store.errors().full_messages().each() do |message| %>
+    <h4><li><%= message %></li></h4>
+  <% end %>
+</ul>
+<hr>
+<h3><a href="/">Return to the home page and try again.</a></h3>
