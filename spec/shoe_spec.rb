@@ -18,4 +18,10 @@ describe(Shoe) do
     expect(new_shoe.save()).to(eq(false))
   end
 
+  it("ensures the shoe brand is unique") do
+    new_shoe1 = Shoe.new({:brand => "Converse"})
+    new_shoe2 = Shoe.new({:brand => "Converse"})
+    expect(new_shoe1 == new_shoe2).to(eq(false))
+  end
+
 end

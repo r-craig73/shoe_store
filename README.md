@@ -14,15 +14,15 @@
 2. Capitalize (using the titleize method and titleize_name callback) the first letter of the store name.
 3. Validate the presence of a store name (store name is not saved if a user enters a blank store name).
 4. Validate the length of the store name does not exceed 100 characters.
-5. TBD
+5. Validate the store name is unique.
 
 ### Back end specs: class Shoe
 1. Join relationship with Store (using shoulda-matchers gem).
 2. Capitalize (using the titleize method and titleize_name callback) the first letter of the shoe brand.
 3. Validate the presence of a shoe brand (shoe brand name is not saved if a user enters a blank shoe brand name).
 4. Validate the length of the shoe brand does not exceed 100 characters.
-5. Correct currency format (25 -> $25.00). (ONGOING: Could be psql related and/or callback?)
-6. TBD
+5. Validate the shoe brand is unique.
+6. Correct currency format (25 -> $25.00). (ONGOING: Could be psql related and/or callback?)
 
 ### Front end specs: Sinatra and user stories (all ONGOING)
 1. A user should be able to add, update, delete and list shoe stores.

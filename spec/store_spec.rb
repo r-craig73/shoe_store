@@ -18,4 +18,10 @@ describe(Store) do
     expect(store32.save()).to(eq(false))
   end
 
+  it("ensures the store name is unique") do
+    store1 = Store.new({:name => "Northeast Portland"})
+    store2 = Store.new({:name => "Northeast Portland"})
+    expect(store1 == store2).to(eq(false))
+  end
+
 end
