@@ -1,7 +1,7 @@
-# volunteer_tracker
+# shoe_store
 
 #### by Ron Craig (ron.craig@comcast.net)
-#### started 03/02/2018, last update 03/05/2018 (MM/DD/YYYY)
+#### started 03/02/2018, last update 03/06/2018 (MM/DD/YYYY)
 
 ### GitHub repository: https://github.com/r-craig73/shoe_store
 
@@ -20,17 +20,19 @@
 1. Join relationship with Store (using shoulda-matchers gem).
 2. Capitalize (using the titleize method and titleize_name callback) the first letter of the shoe brand.
 3. Validate the presence of a shoe brand (shoe brand name is not saved if a user enters a blank shoe brand name).
-4. Validate the length of the shoe brand does not exceed 100 characters.
-5. Validate the shoe brand is unique.
-6. Correct currency format (25 -> $25.00). (ONGOING: Could be psql related and/or callback?)
+4. Validate the presence of a shoe brand's price (price is not saved if a user enters no cost).
+5. Validate the length of the shoe brand does not exceed 100 characters.
+6. Validate the shoe brand is unique.
+7. Correct currency format (25 -> $25.00). (ONGOING: Could be psql related or callback function?)
 
-### Front end specs: Sinatra and user stories (all ONGOING)
+### Front end specs: Sinatra and user stories
 1. A user should be able to add, update, delete and list shoe stores.
 2. A user should be able to add and list new shoe brands and price.
-3. A user should be able to add shoe brands in the application.
-4. A user should be able to input a shoe brand to a store to show where they are sold.
-5. A user should be able to associate the same brand of shoes with multiple stores.
-6. Information is not saved if you enter a blank store or blank shoe brand.
+3. Information is not saved if you enter a blank store, shoe brand, or price.
+4. A user should be able to add shoe brands in the application.
+5. A user should be able to input a shoe brand to a store to show where they are sold. (ONGOING)
+6. A user should be able to associate the same brand of shoes with multiple stores.(ONGOING)
+
 
 ## Setup/Instructions
 ### Install Sinatra Active Reader

@@ -21,7 +21,7 @@ post('/success') do
   if @store.save()
     erb(:success)
   else
-    erb(:errors)
+    erb(:store_errors)
   end
 end
 
@@ -38,7 +38,7 @@ post('/shoes') do
   if @shoe.save()
     erb(:success)
   else
-    erb(:errors)
+    erb(:shoe_errors)
   end
 end
 
@@ -56,7 +56,7 @@ patch('/stores/:id') do
   if @store.save()
     erb(:success)
   else
-    erb(:errors)
+    erb(:store_errors)
   end
 end
 
