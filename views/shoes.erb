@@ -18,7 +18,7 @@
     <h3>List of Shoe Brands</h3>
   <ul>
   <% @shoes.each() do |shoe| %>
-    <h4><li><%= shoe.brand() %>: $<%= shoe.price %></li></h4>
+    <h4><li><a href="shoes/<%= shoe.id() %>"><%= shoe.brand() %></a>: $<%= shoe.price %></li></h4>
   <% end %>
     </ul>
   <% else %>
