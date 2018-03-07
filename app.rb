@@ -38,7 +38,6 @@ get('/stores/:id') do
   brand = params[:brand]
   @shoes = Shoe.all()
   @store = Store.find(params.fetch('id').to_i())
-  #binding.pry
   erb(:store_edit)
 end
 
@@ -63,8 +62,12 @@ delete('/stores/:id') do
   end
 end
 
-post('/') do
-  "Hello World"
+post('/stores/:id') do
+  @store = Store.find(params.fetch('id').to_i())
+  list_shoe = Shoe.find(params.fetch('shoe_id').to_i())
+  @store.shoes.push(list_shoe)
+  @shoes = Shoe.all()
+  erb(:store_edit)
 end
 
 get('/shoes/:id') do
@@ -93,7 +96,6 @@ end
 delete('/shoes/:id') do
   @shoe = Shoe.find(params.fetch('id').to_i())
   if @shoe.destroy()
-    #redirect("/")
     erb(:success)
   else
     erb(:shoe_errors)
