@@ -1,7 +1,7 @@
 # shoe_store
 
 #### by Ron Craig (ron.craig@comcast.net)
-#### started 03/02/2018, last update 03/06/2018 (MM/DD/YYYY)
+#### started 03/02/2018, last update 03/07/2018 (MM/DD/YYYY)
 
 ### GitHub repository: https://github.com/r-craig73/shoe_store
 
@@ -23,17 +23,15 @@
 4. Validate the presence of a shoe brand's price (price is not saved if a user enters no cost).
 5. Validate the length of the shoe brand does not exceed 100 characters.
 6. Validate the shoe brand is unique.
-7. Correct currency format (25 -> $25.00). (ONGOING: Could be psql related or callback function?)
+7. Correct currency format (25 -> $25.00). (not working)
 
 ### Front end specs: Sinatra and user stories
 1. A user should be able to add, update, delete and list shoe stores.
 2. A user should be able to add and list new shoe brands and price.
 3. Information is not saved if you enter a blank store, shoe brand, or price.
 4. A user should be able to add shoe brands in the application.
-5. A user should be able to associate the same brand of shoes with multiple stores.(ONGOING)
-6. A user should be able to input a shoe brand to a store to show where they are sold. (ONGOING)
-
-
+5. A user should be able to associate the same brand of shoes with multiple stores. (created, but not working)
+6. A user should be able to input a shoe brand to a store to show where they are sold. (not working)
 
 ## Setup/Instructions
 ### Install Sinatra Active Reader
@@ -48,7 +46,7 @@
 * Open Postgres ($ psql)
 
 ## Known Bugs
-### No currency value for shoe brands.
+### No currency value for shoe brands, shoe and store association is not working and store inventory.
 
 ## Technology used
 * Ruby, Sinatra and shoulda-matchers (application)
