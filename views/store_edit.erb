@@ -1,6 +1,6 @@
 <h2>Store Details</h2>
 <h3><%= @store.name() %></h3>
-<h4><%= @brands %></h4>
+<h4><%= @store.shoes() %></h4>
 
 <form action="/stores/<%= @store.id() %>" method="post">
   <input name="_method" type="hidden" value="patch">

@@ -50,7 +50,7 @@ get('/stores/:id') do
   price = params[:price]
   @store = Store.find(params.fetch('id').to_i())
   @shoes = Shoe.all()
-  @brands = @store.shoes()
+  @store.shoes()
   erb(:store_edit)
 end
 
