@@ -14,17 +14,6 @@ get('/') do
   erb(:index)
 end
 
-post('/success') do
-  name = params[:name]
-  @store = Store.new({:name => name, :id => nil})
-  @stores = Store.all()
-  if @store.save()
-    erb(:success)
-  else
-    erb(:store_errors)
-  end
-end
-
 get('/shoes') do
   @stores = Store.all()
   @shoes = Shoe.all()
@@ -47,8 +36,9 @@ end
 get('/stores/:id') do
   name = params[:name]
   brand = params[:brand]
+  @shoes = Shoe.all()
   @store = Store.find(params.fetch('id').to_i())
-  @shoes = @store.shoes()
+  #binding.pry
   erb(:store_edit)
 end
 
@@ -70,5 +60,16 @@ delete('/stores/:id') do
     redirect("/")
   else
     erb(:store_edit)
+  end
+end
+
+post('/success') do
+  name = params[:name]
+  @store = Store.new({:name => name, :id => nil})
+  @stores = Store.all()
+  if @store.save()
+    erb(:success)
+  else
+    erb(:store_errors)
   end
 end
