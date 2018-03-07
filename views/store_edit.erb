@@ -21,7 +21,7 @@
 <hr>
 <h3>Add a shoe brand to <%= @store.name() %>'s inventory.</h3>
 
-<form action="/store" method="post">
+<form action="/" method="post">
   <label for="shoe_id">Select a Shoe</label>
   <select id='shoe_id' name='shoe_id' type='text'>
     <% @shoes.each() do |shoe| %>

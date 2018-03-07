@@ -57,10 +57,14 @@ end
 delete('/stores/:id') do
   @store = Store.find(params.fetch('id').to_i())
   if @store.destroy()
-    redirect("/")
+    erb(:success)
   else
-    erb(:store_edit)
+    erb(:store_errors)
   end
+end
+
+post('/') do
+  "Hello World"
 end
 
 get('/shoes/:id') do
