@@ -14,15 +14,16 @@
 </form>
 <hr>
 
-<h2>Add a shoe brand to...</h2>
-<h3><%= @store.name() %></h3>
+<h2>Add a shoe brand</h2>
 
 <form action="/shoes" method="post">
   <input name="store_id" type="hidden" value="<%= @store.id() %>">
   <label for="brand">Shoe brand:</label>
   <input id="brand" name="brand" type="text">
+  <br>
   <label for="price">Please enter shoe brand's cost to the nearest whole dollar.</label>
   <input id="price" name="price" class="form-control" aria-label="Amount (to the nearest dollar)">
+  <br>
   <button type="submit">Add Shoe Brand</button>
 </form>
 <hr>

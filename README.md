@@ -30,8 +30,9 @@
 2. A user should be able to add and list new shoe brands and price.
 3. Information is not saved if you enter a blank store, shoe brand, or price.
 4. A user should be able to add shoe brands in the application.
-5. A user should be able to input a shoe brand to a store to show where they are sold. (ONGOING)
-6. A user should be able to associate the same brand of shoes with multiple stores.(ONGOING)
+5. A user should be able to associate the same brand of shoes with multiple stores.(ONGOING)
+6. A user should be able to input a shoe brand to a store to show where they are sold. (ONGOING)
+
 
 
 ## Setup/Instructions
