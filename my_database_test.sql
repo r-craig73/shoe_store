@@ -229,7 +229,7 @@ COPY stores (id, name) FROM stdin;
 -- Name: shoes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ronc
 --
 
-SELECT pg_catalog.setval('shoes_id_seq', 16, true);
+SELECT pg_catalog.setval('shoes_id_seq', 33, true);
 
 
 --
@@ -243,7 +243,7 @@ SELECT pg_catalog.setval('shoes_stores_id_seq', 1, false);
 -- Name: stores_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ronc
 --
 
-SELECT pg_catalog.setval('stores_id_seq', 19, true);
+SELECT pg_catalog.setval('stores_id_seq', 36, true);
 
 
 --
