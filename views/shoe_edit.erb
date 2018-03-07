@@ -1,0 +1,18 @@
+<h2><%= @shoe.brand() %> store details...</h2>
+
+<br>
+
+<form action="/shoes/<%= @shoe.id() %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+  <label for="name">Change shoe brand's name:</label>
+  <input id="name" name="name" type="text">
+  <button type="submit">Update Shoe Brand</button>
+</form>
+  <br>
+<form action="/shoes/<%= @shoe.id() %>" method="post">
+  <input name="_method" type="hidden" value="delete">
+  <button type="submit">Delete Shoe Brand</button>
+</form>
+
+<hr>
+<h4><a href="/">Return to the home page.</a></h4>

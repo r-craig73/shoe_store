@@ -63,6 +63,39 @@ delete('/stores/:id') do
   end
 end
 
+get('/shoes/:id') do
+  brand = params[:brand]
+  price = params[:price]
+  @stores = Store.all()
+  @shoe = Shoe.find(params.fetch('id').to_i())
+  @shoes = Shoe.all()
+  #binding.pry
+  erb(:shoe_edit)
+end
+
+patch('/shoes/:id') do
+  brand = params[:brand]
+  price = params[:price]
+  @shoe = Shoe.find(params.fetch('id').to_i())
+  @shoe.update({:brand => brand})
+  @shoes = Shoe.all()
+  if @shoe.save()
+    erb(:success)
+  else
+    erb(:shoe_errors)
+  end
+end
+
+delete('/shoes/:id') do
+  @shoe = Shoe.find(params.fetch('id').to_i())
+  if @shoe.destroy()
+    #redirect("/")
+    erb(:success)
+  else
+    erb(:shoe_errors)
+  end
+end
+
 post('/success') do
   name = params[:name]
   @store = Store.new({:name => name, :id => nil})
