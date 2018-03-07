@@ -26,6 +26,7 @@ post('/success') do
 end
 
 get('/shoes') do
+  @stores = Store.all()
   @shoes = Shoe.all()
   erb(:shoes)
 end
@@ -35,6 +36,7 @@ post('/shoes') do
   price = params[:price]
   @shoe = Shoe.new({:brand => brand, :price => price, :id => nil})
   @shoes = Shoe.all()
+  binding.pry
   if @shoe.save()
     erb(:success)
   else
@@ -48,7 +50,7 @@ get('/stores/:id') do
   price = params[:price]
   @store = Store.find(params.fetch('id').to_i())
   @shoes = Shoe.all()
-  #binding.pry
+  @brands = @store.shoes()
   erb(:store_edit)
 end
 

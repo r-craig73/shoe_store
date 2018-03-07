@@ -2,24 +2,45 @@
 
 <form action="/shoes" method="post">
   <div class="form-group">
-    <label for="brand"><h3>Please enter the shoe brand name.</h3></label>
+    <label for="brand">Please enter the shoe brand name.</label>
     <input id="brand" name="brand" class="form-control" type="text">
   </div>
   <div class="form-group">
-    <label for="price"><h3>Please enter shoe brand's cost to the nearest whole dollar.</h3></label>
-    <input id="price" name="price" class="form-control" aria-label="Amount (to the nearest dollar)">
+    <label for="price">Please enter shoe brand's cost to the nearest whole dollar.</label>
+    <input id="price" name="price" class="form-control" type="number">
   </div>
   <button type="submit" class="btn btn-info">Add shoe</button>
 </form>
+<br>
 
 <% if @shoes.any?() %>
+    <h3>List of Shoe Brands</h3>
   <ul>
   <% @shoes.each() do |shoe| %>
-    <h3><li><%= shoe.brand() %>: $<%= shoe.price %></li></h3>
+    <h4><li><%= shoe.brand() %>: $<%= shoe.price %></li></h4>
   <% end %>
     </ul>
   <% else %>
     <h3>No shoe brands at the moment!</h3>
 <% end %>
+<hr>
+<h3>Add a shoe brand that associate to a store</h3>
+
+<form action="/shoes" method="post">
+  <label for="store_id">Select a Store</label>
+  <select id='store_id' name='store_id' type='text'>
+    <% @stores.each() do |store| %>
+      <option value="<%= store.id()%>"> <%= store.name() %> </option>
+    <% end %>
+  </select>
+<br>
+  <label for="brand">Shoe Brand Name:</label>
+  <input id="brand" name="brand" type="text">
+<br>
+  <label for="price">Shoe brand's cost to the nearest whole dollar.</label>
+  <input id="price" name="price" class="form-control" type="number">
+<br>
+  <button type="submit">Add shoe</button>
+</form>
 <hr>
 <h3><a href="/">Return to the home page.</a></h3>
