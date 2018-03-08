@@ -207,13 +207,8 @@ COPY schema_migrations (version) FROM stdin;
 
 COPY shoes (id, brand, price) FROM stdin;
 1	Nike	46.00
-2	Bobos	\N
-3	Converse	\N
-4	Asdfsfa	20.00
-5	Dafasdfsd	45.00
-6	Gucci	200.00
-7	Dafdafsa	14.00
-8	Adfsdfsdf	45.00
+14	Yeezes	250.00
+20	Bobos	3.00
 \.
 
 
@@ -222,6 +217,9 @@ COPY shoes (id, brand, price) FROM stdin;
 --
 
 COPY shoes_stores (id, shoe_id, store_id) FROM stdin;
+4	14	28
+5	1	28
+6	20	28
 \.
 
 
@@ -230,8 +228,7 @@ COPY shoes_stores (id, shoe_id, store_id) FROM stdin;
 --
 
 COPY stores (id, name) FROM stdin;
-18	Prune Hill
-21	Westside
+28	Downtown
 \.
 
 
@@ -239,21 +236,21 @@ COPY stores (id, name) FROM stdin;
 -- Name: shoes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ronc
 --
 
-SELECT pg_catalog.setval('shoes_id_seq', 8, true);
+SELECT pg_catalog.setval('shoes_id_seq', 20, true);
 
 
 --
 -- Name: shoes_stores_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ronc
 --
 
-SELECT pg_catalog.setval('shoes_stores_id_seq', 1, false);
+SELECT pg_catalog.setval('shoes_stores_id_seq', 6, true);
 
 
 --
 -- Name: stores_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ronc
 --
 
-SELECT pg_catalog.setval('stores_id_seq', 23, true);
+SELECT pg_catalog.setval('stores_id_seq', 28, true);
 
 
 --
