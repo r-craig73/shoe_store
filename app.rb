@@ -76,7 +76,6 @@ get('/shoes/:id') do
   @stores = Store.all()
   @shoe = Shoe.find(params.fetch('id').to_i())
   @shoes = Shoe.all()
-  #binding.pry
   erb(:shoe_edit)
 end
 
