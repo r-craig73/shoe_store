@@ -1,5 +1,4 @@
 <h2><%= @store.name() %> store details...</h2>
-<br>
 
 <form action="/stores/<%= @store.id() %>" method="post">
   <input name="_method" type="hidden" value="patch">
@@ -12,7 +11,7 @@
   <input name="_method" type="hidden" value="delete">
   <button type="submit">Delete Store</button>
 </form>
-<hr>
+  <hr>
 <h3>Add a shoe brand to <%= @store.name() %>'s inventory.</h3>
 
 <form action="/stores/<%= @store.id() %>" method="post">
@@ -25,12 +24,11 @@
   <button type="submit">Add shoe to Store</button>
 </form>
 
-<h3>Available shoes at <%= @store.name() %></h3>
+<h3><%= @store.name() %>'s shoe inventory:</h3>
 <ul>
     <% @store.shoes.each do |shoe| %>
       <li><%= shoe.brand() %></li>
     <% end %>
   </ul>
-
 <hr>
 <h4><a href="/">Return to the home page.</a></h4>
